@@ -1,0 +1,361 @@
+/* 초기화 */
+*{
+ margin: 0;    
+ padding: 0;
+ box-sizing: border-box;
+}
+ul{
+ list-style: none;
+}
+a{
+ color: inherit;
+ text-decoration: none;
+}
+img{
+ border: 0;
+ vertical-align: top;
+}
+.clearfix::after{
+ content: "";
+ display: table;
+ clear: both;
+}
+body{
+ background-color: #fff;
+ color: #222328;
+}
+.wrap{
+ width: 1000px;
+}
+
+/* 레이아웃 */
+
+/* 모달 레이어 팝업 영역 */
+.modal{
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0,0,0,0.8);
+ z-index: 100;
+ display: none;
+}
+.modal .modal_inner{
+ width: 400px;
+ height: 400px;
+ background-color: #fff;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ text-align: center;
+ padding: 20px;
+ border: 2px solid #ff4500;
+}
+.modal .modal_inner p.tit{
+ font-size: 25px;
+ margin-bottom: 25px;
+ border-bottom: 2px solid #ff4500;
+ padding: 5px;
+}
+.modal .modal_inner p{
+ font-size: 17px;
+ margin-bottom: 25px;
+}
+.modal .modal_inner ul.txt{
+ font-size: 14px;
+ line-height: 2;
+}
+.modal .modal_inner .btn{
+ width: 60px;
+ height: 30px;
+ border-radius: 10px;
+ font-size: 14px;
+ border: 0;
+ background-color: #000;
+ color: #fff;
+ position: absolute;
+ right: 20px;
+ bottom: 20px;
+ cursor: pointer;
+}
+
+
+/* 왼쪽 영역 */
+header{
+ float: left;
+ width: 200px;
+ height: 650px;
+ position: relative;
+ z-index: 10;
+}
+
+/* 로고 영역 */
+header h1{
+ padding: 30px 0;
+ width: 200px;
+}
+header h1 a img{
+ width: 180px;
+ height: 30px;
+}
+
+/* 메뉴 영역 */
+header nav{
+ width: 180px;
+ text-align: center;
+ margin: 0 auto;
+}
+header nav ul.gnb{
+ width: 100%; 
+}
+/* 메인 메뉴 */
+header nav ul.gnb>li{
+ width: 100%;
+}
+header nav ul.gnb>li>a{
+ display: block;
+ width: 100%;
+ height: 50px;
+ line-height: 50px;
+ font-size: 22px;
+ background-color: #434748;
+ color: #fff;
+}
+header nav ul.gnb>li:hover>a{
+ background-color: #1d8844;
+ color: #000;
+}
+
+/* 서브 메뉴 */
+header nav ul.gnb>li>ul.sub{
+ width: 100%;
+ display: none;
+}
+header nav ul.gnb>li>ul.sub>li{
+ width: 100%;
+ height: 40px;
+}
+header nav ul.gnb>li>ul.sub>li>a{
+ display: block;
+ width: 100%;
+ height: 100%;
+ line-height: 40px;
+ font-size: 18px;
+}
+header nav ul.gnb>li>ul.sub>li:hover>a{
+ background-color: #3cb149;
+ color: #fff;
+}
+
+/* 오른쪽 영역 */
+.rcon{
+ float: left;
+ width: 800px;
+ height: 650px;
+}
+/* 슬라이드 영역 */
+.rcon .slide{
+ width: 100%;
+ height: 350px;
+ position: relative;
+}
+.rcon .slide li{
+ width: 100%;
+ height: 350px;
+ position: absolute;
+ left: 0;
+ top: 0;
+}
+
+/* 콘텐츠 영역 */
+.rcon .contents{
+ width: 100%;
+ height: 200px;
+}
+.contents section{
+ float: left;
+}
+.contents section h3{
+ width: 100px;
+ height: 30px;
+ line-height: 30px;
+ background-color: #5f1c25;
+ color: #fff;
+ text-align: center;
+ border-radius: 5px 5px 0 0;
+}
+
+/* 공지사항/갤러리 영역 */
+.contents .notice_gal{
+ width: 45%;
+ height: 200px;
+ position: relative;
+}
+.contents .notice_gal h3{
+ position: absolute;
+ left: 0;
+ top: 0;
+ background-color: #ccc;
+ cursor: pointer;
+}
+.contents .notice_gal h3.gal_txt{
+ left: 100px;
+}
+.contents .notice_gal h3.on{
+ background-color: #5f1c25;
+}
+.contents .notice_gal ul{
+ width: 100%;
+ height: 170px;
+ background-color: #fff;
+ border: 1px solid #333;
+ border-top-right-radius: 20px;
+ padding: 5px;
+ position: absolute;
+ left: 0;
+ top: 30px;
+ display: none;
+}
+.contents .notice_gal ul.on{
+ display: block;
+}
+
+/* 공지사항 영역 */
+.contents .notice_gal ul.notice{
+ width: 100%;
+}
+.contents .notice_gal ul.notice li{
+ width: 100%;
+ height: 30px;
+ line-height: 30px;
+ font-size: 13px;
+ position: relative;
+ transition: all 0.6s;
+}
+.contents .notice_gal ul.notice li a{
+ display: block;
+ width: 100%;
+ height: 100%;
+}
+.contents .notice_gal ul.notice li a:hover{
+ color: #ccc;
+}
+.contents .notice_gal ul.notice li a .day{
+ position: absolute;
+ top: 0;
+ right: 10px;
+}
+.contents .notice_gal ul.gal{
+ width: 100%; 
+}
+.contents .notice_gal ul.gal li{
+ width: 100px;
+ height: 100px;
+ float: left;
+ margin-top: 10px;
+ margin-left: 10px;
+}
+.contents .notice_gal ul.gal li:hover{
+ opacity: 0.7;
+}
+.contents .notice_gal ul.gal li img{
+ width: 100px;
+ height: 100px;
+}
+
+/* 배너 영역 */
+.contents .banner{
+ width: 25%;
+ height: 200px;
+}
+.contents img{
+ width: 100%;
+ height: 170px;
+}
+
+/* 바로가기 영역 */
+.contents .baro{
+ width: 30%;
+ height: 200px;
+}
+.contents .baro ul{
+ width: 100%;
+ height: 170px;
+ padding: 10px;
+ border: 1px solid #333;
+ border-top-right-radius: 20px; 
+}
+.contents .baro ul li{
+ width: 100%;
+ height: 50px;
+ line-height: 50px;
+ background-color: #fff;
+ border: 1px solid #333;
+ border-bottom: 0;
+ padding-left: 100px;
+ background-repeat: no-repeat;
+ background-size: 50px;
+ background-position: 20px;
+}
+.contents .baro ul li:nth-child(1){
+ background-image: url(../images/sub1.png);
+}
+.contents .baro ul li:nth-child(2){
+ background-image: url(../images/sub2.png);
+}
+.contents .baro ul li:nth-child(3){
+ background-image: url(../images/sub3.png);
+ border: 1px solid #333;
+}
+.contents .baro ul li:hover{
+ opacity: 0.7;
+ color: #5f1c25;
+}
+
+/* 푸터 영역 */
+.rcon footer{
+ width: 100%;
+ height: 100px;
+ background-color: #ddd;
+}
+
+/* 로고 영역 */
+footer .f_logo{
+ float: left;
+ width: 200px;
+ height: 100px;
+ background-image: url(../images/logo2.png);
+ background-repeat: no-repeat;
+ background-position: 0 30px;
+}
+
+/* 하단 메뉴 */
+footer ul.f_menu{
+ float: left;
+ width: 600px;
+ height: 40px;
+ padding-left: 20px;
+ padding-top: 5px;
+}
+footer ul.f_menu li{
+ float: left;
+ font-size: 16px;
+ line-height: 2;
+ margin-right: 10px;
+}
+footer ul.f_menu li:hover{
+ color: #aaa;
+}
+
+/* 카피라이트 영역 */
+footer ul.copy{
+ float: left;
+ width: 600px;
+ height: 60px;
+ padding-top: 5px;
+ padding-left: 20px;
+ font-size: 14px;
+}
+footer ul.copy li{
+ float: left;
+}
