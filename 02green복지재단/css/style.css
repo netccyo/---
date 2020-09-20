@@ -167,14 +167,14 @@ ul.slide li{
  text-indent: -9999px; //텍스트 보이지 않게
 }
 ul.slide li:nth-child(1){
-	background: url(../images/s1.jpg);
+	background: url(../images/s1.png);
 }
 ul.slide li:nth-child(2){
-	background: url(../images/s2.jpg);
+	background: url(../images/s2.png);
 	left: -1200px;
 }
 ul.slide li:nth-child(3){
-	background: url(../images/s3.jpg);
+	background: url(../images/s3.png);
 		left: -1200px;
 }
 .contents{
